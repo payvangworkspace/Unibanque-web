@@ -1,0 +1,92 @@
+.callback-section {
+  background: linear-gradient(to bottom, #4e9ab4, #026aa7);
+  padding: 5rem 2rem;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  color: #ffffff;
+}
+
+.callback-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.callback-container h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.callback-container p {
+  font-size: 1.2rem;
+  color: #e6f7ff;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.callback-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.callback-form input,
+.callback-form select {
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 1rem;
+  width: 260px;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.callback-form input::placeholder {
+  color: #e0f7fa;
+}
+
+.callback-form input:focus,
+.callback-form select:focus {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.callback-form button {
+  background-color: #c5d2d8;
+  color: #4f5b52;
+  font-weight: 700;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.callback-form button:hover {
+  background-color: #0369a1;
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .callback-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .callback-form input,
+  .callback-form select,
+  .callback-form button {
+    width: 100%;
+    max-width: 350px;
+  }
+}

@@ -1,0 +1,104 @@
+/* Container */
+.stats-section {
+  background: #ffffff;
+  padding: 6rem 1.5rem;
+  text-align: center;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222222;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Heading */
+.stats-heading h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  max-width: 720px;
+  margin: 0 auto;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.3rem;
+}
+
+.stats-heading h2 span {
+  color: #38bdf8; /* sky blue accent */
+  background: #e0f7ff; /* light blue background */
+  padding: 0.3em 0.6em;
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 3px 8px rgba(56, 189, 248, 0.3); /* soft blue shadow */
+}
+
+.stats-heading p {
+  font-size: 1.2rem;
+  color: #555555;
+  margin-top: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+/* Each Stat Card */
+.stat-card {
+  background: #f1f4f4;
+  border-radius: 22px;
+  padding: 3rem 2.5rem;
+  width: 250px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px) scale(1.06);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.14);
+}
+
+/* Icon styling */
+.stat-card .icon {
+  font-size: 3.5rem;
+  color: #38bdf8; /* sky blue */
+  margin-bottom: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.stat-card:hover .icon {
+  color: #0ea5e9; /* darker blue on hover */
+}
+
+/* Stat number */
+.stat-card h3 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin: 0;
+  letter-spacing: 0.06em;
+}
+
+/* Stat label */
+.stat-card p {
+  margin-top: 0.7rem;
+  color: #555555;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
