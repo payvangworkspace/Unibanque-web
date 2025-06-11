@@ -11,6 +11,8 @@ import IndustriesSection from './Components/IndustriesSection';
 import CallBackForm from './Components/CallBackForm';
 import Footer from './Components/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AboutUs from './Components/AboutUs';
+import AboutUsBanner from './Components/AboutUsBanner';
 
 
 
@@ -39,6 +41,46 @@ function Home(){
 
   )
 }
+
+
+
+function About(){
+  return (
+<>
+<Navbar/>
+<AboutUsBanner/>
+<AboutUs/>
+<CallBackForm/>
+<Footer/>
+
+</>
+
+
+  )
+
+}
+
+
+
+
+function MissionAndVision(){
+return (
+<>
+
+<Navbar/>
+
+
+
+</>
+
+
+
+)
+
+
+
+}
+
 
 
 
@@ -91,6 +133,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
            <Route path="/services" element={<Services />} />
+               <Route path="/about-us" element={<About />} />
+                  <Route path="/mission-vision" element={<MissionAndVision />} />
              </Routes>
   
     </Router>
