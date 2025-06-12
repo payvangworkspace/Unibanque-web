@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../External CSS/Navbar.css';
 import { FaChevronDown, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -10,8 +11,25 @@ const Navbar = () => {
     document.title = 'Home';
   }, []);
 
+  const navigate=useNavigate();
+
+
+function redirectSubMenu(redirectLink){
+  console.log()
+  navigate(menuItems[0].links[redirectLink])
+  
+
+}
+
+
+function redirectHome(){
+  navigate("/")
+}
+
+
+
   const menuItems = [
-    { title: 'UniBanque', submenu: ['About Us', 'Mission, Vision and Values', 'Why Choose Us'], link: '#' },
+    { title: 'UniBanque', submenu: ['About Us', 'Mission, Vision and Values', 'Why Choose Us'], links:["/about-us","/mission-vision","/why-choose-us"] },
     { title: 'Services', submenu: [], link: '/services' },
     { title: 'Solutions', submenu: ['Industries', 'Finance', 'Capital Markets', 'Enterprise Technology', 'Manufacturing', 'Healthcare', 'Higher Education', 'Logistics'], link: '#' },
     { title: 'Careers', submenu: [], link: '/careers' },
@@ -32,7 +50,7 @@ const Navbar = () => {
           className="navbar-logo"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6 }} onClick={()=>{redirectHome()}}
         />
       </div>
 
@@ -62,7 +80,7 @@ const Navbar = () => {
                   transition={{ duration: 0.25 }}
                 >
                   {item.submenu.map((option, subIdx) => (
-                    <li key={subIdx} className="dropdown-item">{option}</li>
+                    <li key={subIdx} className="dropdown-item" onClick={()=>{redirectSubMenu(subIdx)}}>{option}</li>
                   ))}
                 </motion.ul>
               )}
