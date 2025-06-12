@@ -13,6 +13,7 @@ import Footer from './Components/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUs from './Components/AboutUs';
 import AboutUsBanner from './Components/AboutUsBanner';
+import CareerBanner from './Components/CareerBanner';
 
 
 
@@ -41,7 +42,18 @@ function Home(){
 
   )
 }
-
+ 
+function Career(){
+  document.title="Career | Unibanque"
+  return(
+    <>
+   <Navbar/>
+   <CareerBanner/>
+   <CallBackForm/>
+   <Footer/>
+    </>
+  )
+}
 
 
 function About(){
@@ -135,6 +147,7 @@ function App() {
            <Route path="/services" element={<Services />} />
                <Route path="/about-us" element={<About />} />
                   <Route path="/mission-vision" element={<MissionAndVision />} />
+                  <Route path="/careers" element={<Career/>} />
              </Routes>
   
     </Router>
