@@ -13,6 +13,8 @@ import Footer from './Components/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUs from './Components/AboutUs';
 import AboutUsBanner from './Components/AboutUsBanner';
+import { MissionBanner } from './Components/MissionBanner';
+import { MissionVision } from './Components/MissionVision';
 
 
 
@@ -45,6 +47,7 @@ function Home(){
 
 
 function About(){
+  document.title="About Us | Unibanque"
   return (
 <>
 <Navbar/>
@@ -64,11 +67,17 @@ function About(){
 
 
 function MissionAndVision(){
+
+  document.title="Mission & Vision | Unibanque"
+
+
+
 return (
 <>
 
 <Navbar/>
-
+<MissionBanner/>
+<MissionVision/>
 
 
 </>
@@ -88,8 +97,8 @@ function Services(){
   return (
 <>
 <Navbar/>
-<CallBackForm/>
-<Footer/>
+{/* <CallBackForm/>
+<Footer/> */}
 
 
 
@@ -134,7 +143,7 @@ function App() {
           <Route path="/" element={<Home />} />
            <Route path="/services" element={<Services />} />
                <Route path="/about-us" element={<About />} />
-                  <Route path="/mission-vision" element={<MissionAndVision />} />
+                  <Route path="/mission-vision" element={ <MissionAndVision />} />
              </Routes>
   
     </Router>
