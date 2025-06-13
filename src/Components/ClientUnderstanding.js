@@ -5,7 +5,7 @@ const ClientUnderstanding = () => {
     <section className="client-section">
       <div className="client-container">
         <div className="client-text">
-          <h2 className="client-title">Why Choose Us ?</h2>
+          {/* <h2 className="client-title">Why Choose Us ?</h2> */}
          <p className="client-description">
   At UNIBANQUE, we go beyond traditional banking. Our personalized services are designed to align perfectly with your financial aspirations.
   We prioritize trust, transparency, and long-term relationships, ensuring every client receives tailored advice and unmatched support.

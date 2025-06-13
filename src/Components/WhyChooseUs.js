@@ -31,7 +31,7 @@ const WhyChooseUs = () => {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <h2>Why Choose UniBanque</h2>
+        {/* <h2>Why Choose UniBanque</h2> */}
         <p>We deliver modern, secure, and scalable banking solutions tailored to your needs.</p>
       </motion.div>
 

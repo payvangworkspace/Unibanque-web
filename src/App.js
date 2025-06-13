@@ -121,6 +121,7 @@ function WhyChooseUsComponent(){
     <Navbar/>
     <WhyChooseBanner/>
     <WhyChooseUs/>
+   <ClientUnderstanding/>
     <CallBackForm/>
     <Footer/>
     
