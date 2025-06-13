@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Link } from "react-router-dom";
 import '../External CSS/MissionBanner.css';
-export const MissionBanner = () => {
+export  const MissionBanner = () => {
   return (
    <div className="aboutus-banner">
       <div className="overlay">
