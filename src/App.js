@@ -14,9 +14,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUs from './Components/AboutUs';
 import AboutUsBanner from './Components/AboutUsBanner';
 import CareerBanner from './Components/CareerBanner';
-
-
-
+import { MissionBanner } from './Components/MissionBanner';
+import MissionVision from './Components/MissionVision';
+import {WhyChooseBanner} from './Components/WhyChooseBanner'
+import ClientUnderstanding from './Components/ClientUnderstanding'
 function Home(){
   document.title="Home | Unibanque"
   return (
@@ -26,7 +27,7 @@ function Home(){
       <HeroSection/>
       <InfoCards/>
       <InnovationSection/>
-     <WhyChooseUs/>
+     {/* <WhyChooseUs/> */}
       <StatsSection/>
       <ProductServices/>
       <IndustriesSection/>
@@ -48,7 +49,7 @@ function Career(){
   return(
     <>
    <Navbar/>
-   <CareerBanner/>
+<CareerBanner/>
    <CallBackForm/>
    <Footer/>
     </>
@@ -57,6 +58,7 @@ function Career(){
 
 
 function About(){
+  document.title="About Us | Unibanque"
   return (
 <>
 <Navbar/>
@@ -76,11 +78,19 @@ function About(){
 
 
 function MissionAndVision(){
+
+  document.title="Mission & Vision | Unibanque"
+
+
+
 return (
 <>
 
 <Navbar/>
-
+<MissionBanner/>
+<MissionVision/>
+<CallBackForm/>
+<Footer/>
 
 
 </>
@@ -100,8 +110,8 @@ function Services(){
   return (
 <>
 <Navbar/>
-<CallBackForm/>
-<Footer/>
+{/* <CallBackForm/>
+<Footer/> */}
 
 
 
@@ -111,6 +121,25 @@ function Services(){
 
   )
 }
+
+
+
+function WhyChooseUsComponent(){
+  return(
+    <>
+    <Navbar/>
+    <WhyChooseBanner/>
+    <WhyChooseUs/>
+   <ClientUnderstanding/>
+    <CallBackForm/>
+    <Footer/>
+    
+    
+    </>
+  )
+}
+
+
 
 
 
@@ -146,8 +175,9 @@ function App() {
           <Route path="/" element={<Home />} />
            <Route path="/services" element={<Services />} />
                <Route path="/about-us" element={<About />} />
-                  <Route path="/mission-vision" element={<MissionAndVision />} />
-                  <Route path="/careers" element={<Career/>} />
+                   <Route path="/careers" element={<Career />} />
+                     <Route path="/mission-vision" element={<MissionAndVision />} />
+                                          <Route path="/why-choose-us" element={<WhyChooseUsComponent />} />
              </Routes>
   
     </Router>

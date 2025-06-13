@@ -7,10 +7,6 @@ import { useNavigate } from 'react-router-dom';
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
 
-  useEffect(() => {
-    document.title = 'Home';
-  }, []);
-
   const navigate=useNavigate();
 
 
