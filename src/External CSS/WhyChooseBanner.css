@@ -1,0 +1,48 @@
+.mission-banner {
+    background: url("../../public/herosection2.jpg") center/cover no-repeat;
+    background-size: cover;
+    height: 300px; /* Adjust height as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    /* border: 2px solid green; */
+  }
+  
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    /* border: 2px solid yellow; */
+    height: 300px;
+    /* padding: 20px; */
+    text-align: center;
+    width: 100%;
+  }
+  
+  .aboutus-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .breadcrumb {
+    margin-top: 10px;
+    font-size: 1.2rem;
+  }
+  
+  .breadcrumb-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .breadcrumb-link:hover {
+    text-decoration: underline;
+  }
+  
+  .breadcrumb-separator {
+    margin: 0 10px;
+  }
+  
+  .breadcrumb-current {
+    font-weight: bold;
+  }
+  
