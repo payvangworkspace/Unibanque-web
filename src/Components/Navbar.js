@@ -3,7 +3,7 @@ import '../External CSS/Navbar.css';
 import { FaChevronDown, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
 
@@ -63,7 +63,7 @@ function redirectHome(){
                 {item.title} <FaChevronDown className="dropdown-icon" />
               </span>
             ) : (
-              <a href={item.link} className="navbar-link direct-link">{item.title}</a>
+              <Link to={item.link} className="navbar-link direct-link">{item.title}</Link>
             )}
 
             <AnimatePresence>
