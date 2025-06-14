@@ -1,0 +1,82 @@
+/* Icon Styling */
+.icon {
+  margin-right: 10px;
+  color: #005fa3;
+  transition: color 0.3s ease;
+  vertical-align: middle;
+}
+
+/* Links transition */
+.connect-info a,
+.team-contact a {
+  color: #00b2e3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.connect-info a:hover,
+.team-contact a:hover {
+  color: #007bbf;
+}
+
+/* Feedback button transition */
+.feedback-form button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
+.feedback-form {
+  background-color: #f8f9fb;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  flex: 1 1 50%;
+}
+
+.feedback-form h2 {
+  margin-bottom: 20px;
+  color: #002f5f;
+}
+
+.feedback-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 14px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  transition: border 0.2s ease-in-out;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #00b2e3;
+  outline: none;
+}
+
+.feedback-form button {
+  padding: 14px;
+  background-color: #002f5f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #005fa3;
+}

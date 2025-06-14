@@ -18,6 +18,8 @@ import { MissionBanner } from './Components/MissionBanner';
 import MissionVision from './Components/MissionVision';
 import {WhyChooseBanner} from './Components/WhyChooseBanner'
 import ClientUnderstanding from './Components/ClientUnderstanding'
+import ContactUs from './Components/ContactUs';
+
 function Home(){
   document.title="Home | Unibanque"
   return (
@@ -139,7 +141,16 @@ function WhyChooseUsComponent(){
   )
 }
 
-
+function ContactUsPage() {
+  document.title = "Contact Us | Unibanque";
+  return (
+    <>
+      <Navbar />
+      <ContactUs />
+      <Footer />
+    </>
+  );
+}
 
 
 
@@ -175,6 +186,7 @@ function App() {
           <Route path="/" element={<Home />} />
            <Route path="/services" element={<Services />} />
                <Route path="/about-us" element={<About />} />
+               <Route path="/contact" element={<ContactUsPage />} /> 
                    <Route path="/careers" element={<Career />} />
                      <Route path="/mission-vision" element={<MissionAndVision />} />
                                           <Route path="/why-choose-us" element={<WhyChooseUsComponent />} />
