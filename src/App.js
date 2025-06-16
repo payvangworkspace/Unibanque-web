@@ -19,6 +19,9 @@ import MissionVision from './Components/MissionVision';
 import {WhyChooseBanner} from './Components/WhyChooseBanner'
 import ClientUnderstanding from './Components/ClientUnderstanding'
 import ContactUs from './Components/ContactUs';
+import ServicesList from './Components/ServiceList';
+import FinancialPlanningDetails from './Components/FinancialPlanningDetails';
+import CustomSolutionsDetails from './Components/CustomSolutionsDetails';
 
 function Home(){
   document.title="Home | Unibanque"
@@ -109,18 +112,35 @@ return (
 
 
 function Services(){
+  document.title="Services | Unibanque"
   return (
 <>
 <Navbar/>
-{/* <CallBackForm/>
-<Footer/> */}
-
-
-
+<ServicesList />
+<Footer/>
 </>
+  )
+}
 
+function FinancialPlanningDetailsComponent(){
+  
+  return (
+<>
+<Navbar/>
+<FinancialPlanningDetails />
+<Footer/>
+</>
+  )
+}
 
-
+function CustomSolutionsDetailsComponent(){
+  
+  return (
+<>
+<Navbar/>
+<CustomSolutionsDetails />
+<Footer/>
+</>
   )
 }
 
@@ -190,6 +210,9 @@ function App() {
                    <Route path="/careers" element={<Career />} />
                      <Route path="/mission-vision" element={<MissionAndVision />} />
                                           <Route path="/why-choose-us" element={<WhyChooseUsComponent />} />
+
+             <Route path="/services/financial-planning" element={<FinancialPlanningDetailsComponent />} />
+             <Route path="/services/custom-solutions" element={<CustomSolutionsDetailsComponent />} />
              </Routes>
   
     </Router>
