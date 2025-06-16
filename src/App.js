@@ -125,6 +125,9 @@ function Services(){
 
 
 function WhyChooseUsComponent(){
+
+    document.title="Why Choose Us ? | Unibanque"
+
   return(
     <>
     <Navbar/>
@@ -139,6 +142,21 @@ function WhyChooseUsComponent(){
   )
 }
 
+
+
+function IndustriesComponent(){
+  return (
+<>
+<Navbar/>
+<IndustriesSection/>
+{/* <Industries/> */}
+<Footer/>
+
+</>
+
+
+  )
+}
 
 
 
@@ -178,6 +196,7 @@ function App() {
                    <Route path="/careers" element={<Career />} />
                      <Route path="/mission-vision" element={<MissionAndVision />} />
                                           <Route path="/why-choose-us" element={<WhyChooseUsComponent />} />
+                                          <Route path="/industries" element={<IndustriesComponent />} />
              </Routes>
   
     </Router>
