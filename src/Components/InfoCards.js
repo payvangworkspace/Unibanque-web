@@ -30,7 +30,7 @@ const InfoCards = () => {
     <div className="card-container">
       {cardData.map((card, index) => (
         <div className="info-card" key={index}>
-          <img src={card.image} alt={card.title} />
+          <img src={`${process.env.PUBLIC_URL}/${card.image}`} alt={card.title} />
           <div className="card-content">
             <h3>{card.title}</h3>
             <p>{card.description}</p>

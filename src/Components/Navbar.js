@@ -41,7 +41,7 @@ function redirectHome(){
     >
       <div className="navbar-left">
         <motion.img
-          src="/unibanque-logo.png"
+          src={`${process.env.PUBLIC_URL}/unibanque-logo.png`}
           alt="UniBanque Logo"
           className="navbar-logo"
           initial={{ opacity: 0, scale: 0.8 }}

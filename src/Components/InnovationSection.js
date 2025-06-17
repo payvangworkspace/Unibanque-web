@@ -5,7 +5,7 @@ import '../External CSS/InnovationSection.css';
 const InnovationSection = () => {
   const cards = [
     {
-      img: './c1.jpeg',
+      img: './c1.jpg',
       title: 'Our Services',
       subtitle: 'Trade Finance'
     },
@@ -36,7 +36,7 @@ const InnovationSection = () => {
       <div className="innovation-card-section">
         {cards.map((card, idx) => (
           <div className="innovation-card" key={idx}>
-            <img src={card.img} alt={card.subtitle} />
+            <img src={`${process.env.PUBLIC_URL}/${card.img}`} alt={card.subtitle} />
             <div className="innovation-card-content">
               <div className="innovation-card-text">
                 <h4 className="innovation-card-title">{card.title}</h4>

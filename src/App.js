@@ -22,7 +22,8 @@ import ContactUs from './Components/ContactUs';
 import ServicesList from './Components/ServiceList';
 import FinancialPlanningDetails from './Components/FinancialPlanningDetails';
 import CustomSolutionsDetails from './Components/CustomSolutionsDetails';
-
+import  Careers  from './Components/Careers';
+import { BrowserRouter } from 'react-router-dom';
 function Home(){
   document.title="Home | Unibanque"
   return (
@@ -54,7 +55,8 @@ function Career(){
   return(
     <>
    <Navbar/>
-<CareerBanner/>
+{/* <CareerBanner/> */}
+<Careers/>
    <CallBackForm/>
    <Footer/>
     </>
@@ -200,7 +202,7 @@ function App() {
 
 
     <div>
-    <Router>
+  <BrowserRouter basename="/Unibanque-web">
      
         <Routes>
           <Route path="/" element={<Home />} />
@@ -215,7 +217,7 @@ function App() {
              <Route path="/services/custom-solutions" element={<CustomSolutionsDetailsComponent />} />
              </Routes>
   
-    </Router>
+    </BrowserRouter>
     </div>
 
 
