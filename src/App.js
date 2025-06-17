@@ -149,6 +149,9 @@ function CustomSolutionsDetailsComponent(){
 
 
 function WhyChooseUsComponent(){
+
+    document.title="Why Choose Us ? | Unibanque"
+
   return(
     <>
     <Navbar/>
@@ -215,6 +218,7 @@ function App() {
 
              <Route path="/services/financial-planning" element={<FinancialPlanningDetailsComponent />} />
              <Route path="/services/custom-solutions" element={<CustomSolutionsDetailsComponent />} />
+                                          <Route path="/industries" element={<IndustriesComponent />} />
              </Routes>
   
     </BrowserRouter>
