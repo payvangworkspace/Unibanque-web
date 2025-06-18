@@ -18,6 +18,12 @@ import { MissionBanner } from './Components/MissionBanner';
 import MissionVision from './Components/MissionVision';
 import {WhyChooseBanner} from './Components/WhyChooseBanner'
 import ClientUnderstanding from './Components/ClientUnderstanding'
+import ContactUs from './Components/ContactUs';
+import ServicesList from './Components/ServiceList';
+import FinancialPlanningDetails from './Components/FinancialPlanningDetails';
+import CustomSolutionsDetails from './Components/CustomSolutionsDetails';
+import  Careers  from './Components/Careers';
+import { BrowserRouter } from 'react-router-dom';
 function Home(){
   document.title="Home | Unibanque"
   return (
@@ -49,7 +55,8 @@ function Career(){
   return(
     <>
    <Navbar/>
-<CareerBanner/>
+{/* <CareerBanner/> */}
+<Careers/>
    <CallBackForm/>
    <Footer/>
     </>
@@ -107,18 +114,35 @@ return (
 
 
 function Services(){
+  document.title="Services | Unibanque"
   return (
 <>
 <Navbar/>
-{/* <CallBackForm/>
-<Footer/> */}
-
-
-
+<ServicesList />
+<Footer/>
 </>
+  )
+}
 
+function FinancialPlanningDetailsComponent(){
+  
+  return (
+<>
+<Navbar/>
+<FinancialPlanningDetails />
+<Footer/>
+</>
+  )
+}
 
-
+function CustomSolutionsDetailsComponent(){
+  
+  return (
+<>
+<Navbar/>
+<CustomSolutionsDetails />
+<Footer/>
+</>
   )
 }
 
@@ -142,22 +166,16 @@ function WhyChooseUsComponent(){
   )
 }
 
-
-
-function IndustriesComponent(){
+function ContactUsPage() {
+  document.title = "Contact Us | Unibanque";
   return (
-<>
-<Navbar/>
-<IndustriesSection/>
-{/* <Industries/> */}
-<Footer/>
-
-</>
-
-
-  )
+    <>
+      <Navbar />
+      <ContactUs />
+      <Footer />
+    </>
+  );
 }
-
 
 
 
@@ -187,19 +205,23 @@ function App() {
 
 
     <div>
-    <Router>
+  <BrowserRouter basename="/Unibanque-web">
      
         <Routes>
           <Route path="/" element={<Home />} />
            <Route path="/services" element={<Services />} />
                <Route path="/about-us" element={<About />} />
+               <Route path="/contact" element={<ContactUsPage />} /> 
                    <Route path="/careers" element={<Career />} />
                      <Route path="/mission-vision" element={<MissionAndVision />} />
                                           <Route path="/why-choose-us" element={<WhyChooseUsComponent />} />
-                                          <Route path="/industries" element={<IndustriesComponent />} />
+
+             <Route path="/services/financial-planning" element={<FinancialPlanningDetailsComponent />} />
+             <Route path="/services/custom-solutions" element={<CustomSolutionsDetailsComponent />} />
+                                          {/* <Route path="/industries" element={<IndustriesComponent />} /> */}
              </Routes>
   
-    </Router>
+    </BrowserRouter>
     </div>
 
 

@@ -1,0 +1,113 @@
+.contact-container {
+  padding: 60px 20px;
+  background-color: #f5f9fc;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1f2e3d;
+}
+
+.contact-heading {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #002f5f;
+}
+
+.contact-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.feedback-form,
+.contact-info-section {
+  flex: 1 1 450px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.feedback-form h2,
+.contact-info-section h2 {
+  color: #003c57;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.feedback-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 14px;
+  border: 1px solid #ccd6dd;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #fafafa;
+  transition: all 0.2s ease-in-out;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border-color: #00a8e8;
+  background-color: #fff;
+  outline: none;
+}
+
+.feedback-form button {
+  padding: 14px;
+  background-color: #002f5f;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.feedback-form button:hover {
+  background-color: #005fa3;
+  transform: translateY(-2px);
+}
+
+/* Contact Info Styling */
+.connect-info p,
+.team-contact p {
+  margin: 12px 0;
+  font-size: 15px;
+  color: #3b4a59;
+}
+
+.contact-info-section a {
+  color: #00a8e8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info-section a:hover {
+  color: #005fa3;
+}
+
+.team-contact {
+  margin-top: 30px;
+}
+
+.icon {
+  color: #005fa3;
+  margin-right: 10px;
+  vertical-align: middle;
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .contact-layout {
+    flex-direction: column;
+  }
+}
