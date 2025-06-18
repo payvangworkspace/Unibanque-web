@@ -1,0 +1,90 @@
+.manufacturing-section {
+  background-color: #f8fafc;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.manufacturing-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.manufacturing-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.manufacturing-header h2 {
+  font-size: 2.5rem;
+  color: #004b60;
+  margin-bottom: 15px;
+}
+
+.manufacturing-header p {
+  font-size: 1.1rem;
+  color: #5e7d89;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.manufacturing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.manufacturing-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  max-width: 350px;
+  text-align: center;
+  padding-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.manufacturing-card:hover {
+  transform: translateY(-8px);
+}
+
+.manufacturing-card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.manufacturing-card h3 {
+  margin: 20px 0 10px;
+  color: #00556e;
+  font-size: 1.3rem;
+}
+
+.manufacturing-card p {
+  padding: 0 15px;
+  font-size: 0.95rem;
+  color: #607d8b;
+  line-height: 1.5;
+}
+.learn-more-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 28px;
+  background: linear-gradient(135deg, #00688b, #004d66);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 104, 139, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.learn-more-btn:hover {
+  background: linear-gradient(135deg, #008eb3, #006080);
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 104, 139, 0.35);
+}
