@@ -24,6 +24,10 @@ import FinancialPlanningDetails from './Components/FinancialPlanningDetails';
 import CustomSolutionsDetails from './Components/CustomSolutionsDetails';
 import  Careers  from './Components/Careers';
 import { BrowserRouter } from 'react-router-dom';
+import Manufacturing from './Components/Manufacturing';
+import Healthcare from './Components/Healthcare';
+import HigherEducation from './Components/HigherEducation';
+import Logistics from './Components/Logistics';
 function Home(){
   document.title="Home | Unibanque"
   return (
@@ -146,6 +150,81 @@ function CustomSolutionsDetailsComponent(){
   )
 }
 
+function ManufacturingComponent(){
+  document.title="Manufacturing | Unibanque"
+return(
+<>
+<Navbar/>
+<Manufacturing/>
+<CallBackForm/>
+<Footer/>
+
+
+
+</>
+
+
+)
+
+
+
+
+}
+
+function HealthcareComponent(){
+    document.title="Healthcare | Unibanque"
+  return(
+    <>
+    <Navbar/>
+    <Healthcare/>
+    <CallBackForm/>
+    <Footer/>
+    
+    
+    
+    
+    </>
+  )
+}
+
+
+function HigherEducationComponent(){
+      document.title="Higher Education | Unibanque"
+  return(
+    <>
+    <Navbar/>
+    <HigherEducation/>
+    <CallBackForm/>
+    <Footer/>
+    
+    
+    
+    
+    </>
+  )
+}
+
+
+function LogisticsComponent(){
+  document.title="Logistics | Unibanque"
+return(
+<>
+<Navbar/>
+<Logistics/>
+<CallBackForm/>
+<Footer/>
+
+
+
+</>
+
+
+)
+
+
+}
+
+
 
 
 function WhyChooseUsComponent(){
@@ -215,6 +294,13 @@ function App() {
                    <Route path="/careers" element={<Career />} />
                      <Route path="/mission-vision" element={<MissionAndVision />} />
                                           <Route path="/why-choose-us" element={<WhyChooseUsComponent />} />
+
+  <Route path="/manufacturing" element={<ManufacturingComponent />} />
+    <Route path="/healthcare" element={<HealthcareComponent />} />
+      <Route path="/higher-education" element={<HigherEducationComponent />} />
+        <Route path="/logistics" element={<LogisticsComponent />} />
+
+
 
              <Route path="/services/financial-planning" element={<FinancialPlanningDetailsComponent />} />
              <Route path="/services/custom-solutions" element={<CustomSolutionsDetailsComponent />} />
