@@ -218,7 +218,7 @@ function App() {
 
              <Route path="/services/financial-planning" element={<FinancialPlanningDetailsComponent />} />
              <Route path="/services/custom-solutions" element={<CustomSolutionsDetailsComponent />} />
-                                          <Route path="/industries" element={<IndustriesComponent />} />
+                                          {/* <Route path="/industries" element={<IndustriesComponent />} /> */}
              </Routes>
   
     </BrowserRouter>

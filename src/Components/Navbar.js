@@ -1,39 +1,59 @@
-import React, { useState, useEffect } from 'react';
-import '../External CSS/Navbar.css';
-import { FaChevronDown, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import "../External CSS/Navbar.css";
+import { FaChevronDown, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
 
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
+  function redirectSubMenu(index, redirectLink) {
+    // console.log();
+    navigate(menuItems[index].links[redirectLink])
+  }
 
-function redirectSubMenu(redirectLink){
-  console.log()
-  navigate(menuItems[0].links[redirectLink])
-  
-
-}
-
-
-function redirectHome(){
-  navigate("/")
-}
-
-
+  function redirectHome() {
+    navigate("/");
+  }
 
   const menuItems = [
-    { title: 'UniBanque', submenu: ['About Us', 'Mission, Vision and Values', 'Why Choose Us'], links:["/about-us","/mission-vision","/why-choose-us"] },
-    { title: 'Services', submenu: [], link: '/services' },
-    { title: 'Solutions', submenu: ['Industries', 'Finance', 'Capital Markets', 'Enterprise Technology', 'Manufacturing', 'Healthcare', 'Higher Education', 'Logistics'], link: '#' },
-    { title: 'Careers', submenu: [], link: '/careers' },
-    { title: 'Contact Us', submenu: [], link: '/contact' },
+    {
+      title: "UniBanque",
+      submenu: ["About Us", "Mission, Vision and Values", "Why Choose Us"],
+      links: ["/about-us", "/mission-vision", "/why-choose-us"],
+    },
+    { title: "Services", submenu: [], link: "/services" },
+    {
+      title: "Solutions",
+      submenu: [
+        "Industries",
+        "Finance",
+        "Capital Markets",
+        "Enterprise Technology",
+        "Manufacturing",
+        "Healthcare",
+        "Higher Education",
+        "Logistics",
+      ],
+      links: [
+        "/industries",
+        "/finance",
+        "/capital-market",
+        "/enterprise-tech",
+        "/manufacturing",
+        "/healthcare",
+        "/higher-education",
+        "/logistics",
+      ],
+    },
+    { title: "Careers", submenu: [], link: "/careers" },
+    { title: "Contact Us", submenu: [], link: "/contact" },
   ];
 
   return (
-    <motion.nav 
+    <motion.nav
       className="navbar enhanced-navbar"
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -46,7 +66,10 @@ function redirectHome(){
           className="navbar-logo"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }} onClick={()=>{redirectHome()}}
+          transition={{ duration: 0.6 }}
+          onClick={() => {
+            redirectHome();
+          }}
         />
       </div>
 
@@ -63,7 +86,9 @@ function redirectHome(){
                 {item.title} <FaChevronDown className="dropdown-icon" />
               </span>
             ) : (
-              <Link to={item.link} className="navbar-link direct-link">{item.title}</Link>
+              <Link to={item.link} className="navbar-link direct-link">
+                {item.title}
+              </Link>
             )}
 
             <AnimatePresence>
@@ -76,7 +101,15 @@ function redirectHome(){
                   transition={{ duration: 0.25 }}
                 >
                   {item.submenu.map((option, subIdx) => (
-                    <li key={subIdx} className="dropdown-item" onClick={()=>{redirectSubMenu(subIdx)}}>{option}</li>
+                    <li
+                      key={subIdx}
+                      className="dropdown-item"
+                      onClick={() => {
+                        redirectSubMenu(idx, subIdx);
+                      }}
+                    >
+                      {option}
+                    </li>
                   ))}
                 </motion.ul>
               )}
@@ -94,13 +127,13 @@ function redirectHome(){
         <div className="contact-info">
           <motion.span
             whileHover={{ scale: 1.05, x: 5 }}
-            transition={{ type: 'spring', stiffness: 300 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <FaPhoneAlt className="icon" /> +1 (800) 123-4567
           </motion.span>
           <motion.span
             whileHover={{ scale: 1.05, x: 5 }}
-            transition={{ type: 'spring', stiffness: 300 }}
+            transition={{ type: "spring", stiffness: 300 }}
           >
             <FaEnvelope className="icon" /> support@unibanque.com
           </motion.span>
