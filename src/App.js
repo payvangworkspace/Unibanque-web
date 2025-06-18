@@ -22,7 +22,12 @@ import ContactUs from './Components/ContactUs';
 import ServicesList from './Components/ServiceList';
 import FinancialPlanningDetails from './Components/FinancialPlanningDetails';
 import CustomSolutionsDetails from './Components/CustomSolutionsDetails';
-
+import  Careers  from './Components/Careers';
+import { BrowserRouter } from 'react-router-dom';
+import Manufacturing from './Components/Manufacturing';
+import Healthcare from './Components/Healthcare';
+import HigherEducation from './Components/HigherEducation';
+import Logistics from './Components/Logistics';
 function Home(){
   document.title="Home | Unibanque"
   return (
@@ -54,7 +59,8 @@ function Career(){
   return(
     <>
    <Navbar/>
-<CareerBanner/>
+{/* <CareerBanner/> */}
+<Careers/>
    <CallBackForm/>
    <Footer/>
     </>
@@ -159,9 +165,87 @@ function CustomSolutionsDetailsComponent(){
   )
 }
 
+function ManufacturingComponent(){
+  document.title="Manufacturing | Unibanque"
+return(
+<>
+<Navbar/>
+<Manufacturing/>
+<CallBackForm/>
+<Footer/>
+
+
+
+</>
+
+
+)
+
+
+
+
+}
+
+function HealthcareComponent(){
+    document.title="Healthcare | Unibanque"
+  return(
+    <>
+    <Navbar/>
+    <Healthcare/>
+    <CallBackForm/>
+    <Footer/>
+    
+    
+    
+    
+    </>
+  )
+}
+
+
+function HigherEducationComponent(){
+      document.title="Higher Education | Unibanque"
+  return(
+    <>
+    <Navbar/>
+    <HigherEducation/>
+    <CallBackForm/>
+    <Footer/>
+    
+    
+    
+    
+    </>
+  )
+}
+
+
+function LogisticsComponent(){
+  document.title="Logistics | Unibanque"
+return(
+<>
+<Navbar/>
+<Logistics/>
+<CallBackForm/>
+<Footer/>
+
+
+
+</>
+
+
+)
+
+
+}
+
+
 
 
 function WhyChooseUsComponent(){
+
+    document.title="Why Choose Us ? | Unibanque"
+
   return(
     <>
     <Navbar/>
@@ -215,7 +299,7 @@ function App() {
 
 
     <div>
-    <Router>
+  <BrowserRouter basename="/Unibanque-web">
      
         <Routes>
           <Route path="/" element={<Home />} />
@@ -227,11 +311,19 @@ function App() {
                                           <Route path="/why-choose-us" element={<WhyChooseUsComponent />} />
                                            <Route path="/industries" element={<IndustriesComponent />} />
 
+  <Route path="/manufacturing" element={<ManufacturingComponent />} />
+    <Route path="/healthcare" element={<HealthcareComponent />} />
+      <Route path="/higher-education" element={<HigherEducationComponent />} />
+        <Route path="/logistics" element={<LogisticsComponent />} />
+
+
+
              <Route path="/services/financial-planning" element={<FinancialPlanningDetailsComponent />} />
              <Route path="/services/custom-solutions" element={<CustomSolutionsDetailsComponent />} />
+                                          {/* <Route path="/industries" element={<IndustriesComponent />} /> */}
              </Routes>
   
-    </Router>
+    </BrowserRouter>
     </div>
 
 

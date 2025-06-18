@@ -17,7 +17,7 @@ const ClientUnderstanding = () => {
           <button className="client-button">Learn More</button>
         </div>
         <div className="client-image">
-          <img src="/home-facility-bg.png" alt="Client engaging with technology" />
+          <img src={`${process.env.PUBLIC_URL}/home-facility-bg.png`} alt="Client engaging with technology" />
         </div>
       </div>
     </section>
