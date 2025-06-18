@@ -128,6 +128,21 @@ function Services(){
   )
 }
 
+function IndustriesComponent(){
+  document.title="Industries | Unibanque"
+  return (
+<>
+<Navbar/>
+<IndustriesSection/>
+
+<Footer/>
+</>
+  )
+}
+
+
+
+
 function FinancialPlanningDetailsComponent(){
   
   return (
@@ -294,6 +309,7 @@ function App() {
                    <Route path="/careers" element={<Career />} />
                      <Route path="/mission-vision" element={<MissionAndVision />} />
                                           <Route path="/why-choose-us" element={<WhyChooseUsComponent />} />
+                                           <Route path="/industries" element={<IndustriesComponent />} />
 
   <Route path="/manufacturing" element={<ManufacturingComponent />} />
     <Route path="/healthcare" element={<HealthcareComponent />} />
