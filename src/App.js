@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Navbar from './Components/Navbar';
 import HeroSection  from './Components/HeroSection';
@@ -13,7 +13,6 @@ import Footer from './Components/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutUs from './Components/AboutUs';
 import AboutUsBanner from './Components/AboutUsBanner';
-import CareerBanner from './Components/CareerBanner';
 import { MissionBanner } from './Components/MissionBanner';
 import MissionVision from './Components/MissionVision';
 import {WhyChooseBanner} from './Components/WhyChooseBanner'
@@ -28,6 +27,7 @@ import Manufacturing from './Components/Manufacturing';
 import Healthcare from './Components/Healthcare';
 import HigherEducation from './Components/HigherEducation';
 import Logistics from './Components/Logistics';
+
 function Home(){
   document.title="Home | Unibanque"
   return (
@@ -35,7 +35,7 @@ function Home(){
     
       <Navbar/>
       <HeroSection/>
-      <InfoCards/>
+      <InfoCards  />
       <InnovationSection/>
      {/* <WhyChooseUs/> */}
       <StatsSection/>
@@ -260,9 +260,6 @@ function ContactUsPage() {
 
 function App() {
 
-
-
-
   return (
     // <div className="App">
     //   <Navbar/>
@@ -287,7 +284,7 @@ function App() {
   <BrowserRouter basename="/Unibanque-web">
      
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home  />} />
            <Route path="/services" element={<Services />} />
                <Route path="/about-us" element={<About />} />
                <Route path="/contact" element={<ContactUsPage />} /> 

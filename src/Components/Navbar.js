@@ -1,22 +1,28 @@
 import React, { useState, useEffect } from "react";
 import "../External CSS/Navbar.css";
-import { FaChevronDown, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaChevronDown, FaPhoneAlt, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
-
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
 
-  function redirectSubMenu(index, redirectLink) {
-    // console.log();
-    navigate(menuItems[index].links[redirectLink])
-  }
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setActiveMenu(null);
+  };
 
-  function redirectHome() {
+  const redirectSubMenu = (index, redirectLink) => {
+    navigate(menuItems[index].links[redirectLink]);
+    setIsMobileMenuOpen(false);
+  };
+
+  const redirectHome = () => {
     navigate("/");
-  }
+    setIsMobileMenuOpen(false);
+  };
 
   const menuItems = [
     {
@@ -53,40 +59,41 @@ const Navbar = () => {
   ];
 
   return (
-    <motion.nav
-      className="navbar enhanced-navbar"
-      initial={{ y: -50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.6 }}
-    >
+    <motion.nav className="navbar enhanced-navbar" initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 0.6 }}>
       <div className="navbar-left">
-        <motion.img
+        <img
           src={`${process.env.PUBLIC_URL}/unibanque-logo.png`}
           alt="UniBanque Logo"
           className="navbar-logo"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          onClick={() => {
-            redirectHome();
-          }}
+          onClick={redirectHome}
         />
       </div>
 
-      <ul className="navbar-menu">
+      <div className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+        {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+      </div>
+
+      <ul className={`navbar-menu ${isMobileMenuOpen ? "open" : ""}`}>
         {menuItems.map((item, idx) => (
           <li
             key={idx}
             className="navbar-item"
-            onMouseEnter={() => item.submenu.length && setActiveMenu(idx)}
-            onMouseLeave={() => setActiveMenu(null)}
+            onMouseEnter={() => !isMobileMenuOpen && item.submenu.length && setActiveMenu(idx)}
+            onMouseLeave={() => !isMobileMenuOpen && setActiveMenu(null)}
           >
             {item.submenu.length > 0 ? (
-              <span className="navbar-link">
+              <span
+                className="navbar-link"
+                onClick={() => isMobileMenuOpen && setActiveMenu(activeMenu === idx ? null : idx)}
+              >
                 {item.title} <FaChevronDown className="dropdown-icon" />
               </span>
             ) : (
-              <Link to={item.link} className="navbar-link direct-link">
+              <Link
+                to={item.link}
+                className="navbar-link direct-link"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
                 {item.title}
               </Link>
             )}
@@ -104,9 +111,7 @@ const Navbar = () => {
                     <li
                       key={subIdx}
                       className="dropdown-item"
-                      onClick={() => {
-                        redirectSubMenu(idx, subIdx);
-                      }}
+                      onClick={() => redirectSubMenu(idx, subIdx)}
                     >
                       {option}
                     </li>
@@ -118,25 +123,10 @@ const Navbar = () => {
         ))}
       </ul>
 
-      <motion.div
-        className="navbar-right"
-        initial={{ opacity: 0, x: 30 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-      >
+      <motion.div className="navbar-right" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
         <div className="contact-info">
-          <motion.span
-            whileHover={{ scale: 1.05, x: 5 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <FaPhoneAlt className="icon" /> +1 (800) 123-4567
-          </motion.span>
-          <motion.span
-            whileHover={{ scale: 1.05, x: 5 }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
-            <FaEnvelope className="icon" /> support@unibanque.com
-          </motion.span>
+          <span><FaPhoneAlt className="icon" /> +1 (800) 123-4567</span>
+          <span><FaEnvelope className="icon" /> support@unibanque.com</span>
         </div>
       </motion.div>
     </motion.nav>

@@ -1,5 +1,6 @@
 import React from "react";
 import "../External CSS/InfoCards.css";
+import { Link } from "react-router-dom";
 
 const cardData = [
   {
@@ -25,6 +26,9 @@ const cardData = [
   },
 ];
 
+
+
+
 const InfoCards = () => {
   return (
     <div className="card-container">
@@ -34,9 +38,9 @@ const InfoCards = () => {
           <div className="card-content">
             <h3>{card.title}</h3>
             <p>{card.description}</p>
-            <a href="#!" className="read-more">
+            <Link to="/contact" className="read-more">
               {card.linkText} &rarr;
-            </a>
+            </Link>
           </div>
         </div>
       ))}

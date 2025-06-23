@@ -1,6 +1,7 @@
 import React from 'react';
 import '../External CSS/HeroSection.css';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -15,8 +16,8 @@ const HeroSection = () => {
           <h1>Empowering Financial Futures</h1>
           <p>Innovative banking solutions tailored for modern enterprises and individuals.</p>
           <div className="hero-buttons">
-            <a href="/services" className="primary-btn">Explore Services</a>
-            <a href="/contact" className="secondary-btn">Contact Us</a>
+            <Link to="/Unibanque-web/services" className="primary-btn">Explore Services</Link>
+            <Link to="/Unibanque-web/contact" className="secondary-btn">Contact Us</Link>
           </div>
         </motion.div>
       </div>
