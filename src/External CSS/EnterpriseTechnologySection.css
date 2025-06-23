@@ -1,0 +1,67 @@
+.enterprise-section {
+  padding: 60px 30px;
+  background-color: #fefaf2;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.enterprise-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #4b3c1f;
+  font-weight: 600;
+}
+
+.enterprise-card-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.enterprise-card {
+  flex: 0 0 320px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid #e7d9b6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.enterprise-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.enterprise-card .icon {
+  font-size: 2rem;
+  color: #c08f00;
+  margin-bottom: 16px;
+}
+
+.enterprise-card h3 {
+  font-size: 1.3rem;
+  color: #3b2e0c;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.enterprise-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.enterprise-card ul {
+  padding-left: 20px;
+  color: #333;
+}
+
+.enterprise-card ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}

@@ -28,6 +28,10 @@ import Manufacturing from './Components/Manufacturing';
 import Healthcare from './Components/Healthcare';
 import HigherEducation from './Components/HigherEducation';
 import Logistics from './Components/Logistics';
+import FinanceSection from './Components/FinanceSection';
+import CapitalMarketSection from './Components/CapitalMarketSection'
+import EnterpriseTechnologySection from './Components/EnterpriseTechnologySection';
+
 function Home(){
   document.title="Home | Unibanque"
   return (
@@ -256,6 +260,54 @@ function ContactUsPage() {
   );
 }
 
+function IndustriesComponent(){
+  document.title="Industries | Unibanque"
+return(
+<>
+<Navbar/>
+<IndustriesSection/>
+<CallBackForm/>
+<Footer/>
+</>
+)
+}
+
+function FinanceComponent(){
+  document.title="Finance | Unibanque"
+return(
+<>
+<Navbar/>
+<FinanceSection/>
+<CallBackForm/>
+<Footer/>
+</>
+)
+}
+
+function CapitalMarketComponent(){
+  document.title="CapitalMarket | Unibanque"
+return(
+<>
+<Navbar/>
+<CapitalMarketSection/>
+<CallBackForm/>
+<Footer/>
+</>
+)
+}
+
+function EnterpriseTechComponent(){
+  document.title="Enterprise Technology | Unibanque"
+return(
+<>
+<Navbar/>
+<EnterpriseTechnologySection/>
+<CallBackForm/>
+<Footer/>
+</>
+)
+}
+
 
 
 function App() {
@@ -304,7 +356,11 @@ function App() {
 
              <Route path="/services/financial-planning" element={<FinancialPlanningDetailsComponent />} />
              <Route path="/services/custom-solutions" element={<CustomSolutionsDetailsComponent />} />
-                                          {/* <Route path="/industries" element={<IndustriesComponent />} /> */}
+             <Route path="/industries" element={<IndustriesComponent />} /> 
+
+             <Route path="/finance" element={<FinanceComponent />} />
+             <Route path="/capital-market" element={<CapitalMarketComponent />} />
+             <Route path="/enterprise-tech" element={<EnterpriseTechComponent /> }/>
              </Routes>
   
     </BrowserRouter>
