@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/Unibanque-web/static/css/main.26cfd358.css",
-    "main.js": "/Unibanque-web/static/js/main.eb7b77b3.js",
+    "main.js": "/Unibanque-web/static/js/main.07ebb602.js",
     "static/js/453.54458df3.chunk.js": "/Unibanque-web/static/js/453.54458df3.chunk.js",
     "static/media/sample.jpg": "/Unibanque-web/static/media/sample.3d5f6a4d55389c0092b5.jpg",
     "static/media/herosection2.jpg": "/Unibanque-web/static/media/herosection2.903eb148dadb9d960797.jpg",
     "static/media/aboutus.jpg": "/Unibanque-web/static/media/aboutus.006f5c9cee605246bc79.jpg",
     "index.html": "/Unibanque-web/index.html",
     "main.26cfd358.css.map": "/Unibanque-web/static/css/main.26cfd358.css.map",
-    "main.eb7b77b3.js.map": "/Unibanque-web/static/js/main.eb7b77b3.js.map",
+    "main.07ebb602.js.map": "/Unibanque-web/static/js/main.07ebb602.js.map",
     "453.54458df3.chunk.js.map": "/Unibanque-web/static/js/453.54458df3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.26cfd358.css",
-    "static/js/main.eb7b77b3.js"
+    "static/js/main.07ebb602.js"
   ]
 }
