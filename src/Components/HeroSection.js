@@ -16,8 +16,8 @@ const HeroSection = () => {
           <h1>Empowering Financial Futures</h1>
           <p>Innovative banking solutions tailored for modern enterprises and individuals.</p>
           <div className="hero-buttons">
-            <Link to="/Unibanque-web/services" className="primary-btn">Explore Services</Link>
-            <Link to="/Unibanque-web/contact" className="secondary-btn">Contact Us</Link>
+            <Link to="/services" className="primary-btn">Explore Services</Link>
+            <Link to="/contact" className="secondary-btn">Contact Us</Link>
           </div>
         </motion.div>
       </div>

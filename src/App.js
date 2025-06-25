@@ -27,12 +27,15 @@ import Manufacturing from './Components/Manufacturing';
 import Healthcare from './Components/Healthcare';
 import HigherEducation from './Components/HigherEducation';
 import Logistics from './Components/Logistics';
-<<<<<<< HEAD
-=======
+// <<<<<<< HEAD
+// =======
 import FinanceSection from './Components/FinanceSection';
 import CapitalMarketSection from './Components/CapitalMarketSection'
 import EnterpriseTechnologySection from './Components/EnterpriseTechnologySection';
->>>>>>> 804686df0582bf0c082e397c5ef286831ad5fba1
+import StrategicAdvisoryDetails from './Components/StrategicAdvisoryDetails';
+import CorporateInvestmentBankingDetails from './Components/CorporateInvestmentBankingDetails ';
+import PensionRetirementFundsDetails from './Components/PensionRetirementFundsDetails';
+// >>>>>>> 804686df0582bf0c082e397c5ef286831ad5fba1
 
 function Home(){
   document.title="Home | Unibanque"
@@ -310,6 +313,87 @@ return(
 )
 }
 
+function StrategicAdvisoryDetailsComponent(){
+
+  return (
+<>
+<Navbar/>
+<StrategicAdvisoryDetails/>
+<Footer/>
+
+
+
+
+</>
+
+
+  )
+
+
+}
+
+function CorporateAndInvestmentBankingComponent(){
+
+  return (
+<>
+<Navbar/>
+<CorporateInvestmentBankingDetails/>
+<Footer/>
+
+
+
+
+</>
+
+
+  )
+
+
+}
+
+
+function TradeFinanceDetailsComponent(){
+
+  return (
+<>
+<Navbar/>
+<PensionRetirementFundsDetails/>
+<Footer/>
+
+
+
+
+</>
+
+
+  )
+
+
+}
+
+
+
+
+
+
+function PensionRetirementFundsDetailsComponent(){
+
+  return (
+<>
+<Navbar/>
+<PensionRetirementFundsDetails/>
+<Footer/>
+
+
+
+
+</>
+
+
+  )
+
+
+}
 
 
 function App() {
@@ -360,6 +444,10 @@ function App() {
              <Route path="/finance" element={<FinanceComponent />} />
              <Route path="/capital-market" element={<CapitalMarketComponent />} />
              <Route path="/enterprise-tech" element={<EnterpriseTechComponent /> }/>
+             <Route path="/services/strategic-advisory" element={<StrategicAdvisoryDetailsComponent />} />
+            <Route path="/services/corporate-investment-banking" element={<CorporateAndInvestmentBankingComponent />} />
+              <Route path="/services/pension-retirement-funds" element={< PensionRetirementFundsDetailsComponent/>} />
+             <Route path="/services/trade-finance" element={< TradeFinanceDetailsComponent/>} />
              </Routes>
   
     </BrowserRouter>

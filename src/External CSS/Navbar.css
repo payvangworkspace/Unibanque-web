@@ -283,6 +283,13 @@ body {
   background-color: #f0f0f0;
 }
 
+.phone-contact{
+  cursor: pointer;
+}
+
+
+
+
 .contact-info span {
   color: #333;
 }

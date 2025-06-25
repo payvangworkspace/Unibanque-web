@@ -1,67 +1,92 @@
 .capital-section {
-  padding: 60px 30px;
-  background-color: #f2f9f6;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #f8fdfa, #e3f2ee);
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif;
 }
 
-.capital-section h2 {
+.capital-wrapper {
+  max-width: 1200px;
+  margin: auto;
   text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 40px;
-  color: #003d33;
-  font-weight: 600;
 }
 
-.capital-card-grid {
+.capital-header h2 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #003d33;
+  margin-bottom: 15px;
+}
+
+.capital-header p {
+  max-width: 850px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  line-height: 1.7;
+}
+
+.capital-grid {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  scroll-snap-type: x mandatory;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .capital-card {
-  flex: 0 0 320px;
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 28px;
-  border: 1px solid #c7e2d9;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-  scroll-snap-align: start;
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 30px;
+  max-width: 360px;
+  flex: 1 1 300px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+  text-align: center;
+  transition: transform 0.3s ease;
 }
 
 .capital-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
 }
 
-.capital-card .icon {
-  font-size: 2rem;
-  color: #008066;
-  margin-bottom: 16px;
+.capital-icon {
+  font-size: 2.5rem;
+  color: #009879;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .capital-card h3 {
-  font-size: 1.3rem;
-  color: #004d3a;
-  margin-bottom: 12px;
+  font-size: 1.4rem;
   font-weight: 600;
+  color: #004d3a;
+  margin-bottom: 10px;
 }
 
 .capital-card p {
   font-size: 1rem;
   color: #444;
-  margin-bottom: 12px;
+  line-height: 1.6;
 }
 
-.capital-card ul {
-  padding-left: 20px;
-  color: #333;
-}
-
-.capital-card ul li {
-  margin-bottom: 8px;
+.learn-more-btn {
+  margin-top: 1.5rem;
+  padding: 10px 20px;
   font-size: 0.95rem;
-  line-height: 1.4;
+  background-color: #009879;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn .btn-icon {
+  margin-left: 8px;
+}
+
+.learn-more-btn:hover {
+  background-color: #00775f;
 }

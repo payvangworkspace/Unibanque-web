@@ -1,51 +1,49 @@
 import React from 'react';
-import Card from './Card';
+import { FaArrowRight, FaCreditCard, FaChartLine, FaPiggyBank } from 'react-icons/fa';
 import '../External CSS/FinanceSection.css';
-
-import { FaCreditCard, FaChartLine, FaPiggyBank } from 'react-icons/fa';
 
 const financeSolutions = [
   {
     title: 'Retail Banking',
-    description: 'Digital-first banking solutions for individuals.',
-    details: [
-      'Omnichannel experiences for customers.',
-      'Real-time mobile banking apps.',
-      'AI-driven personalization and analytics.'
-    ],
-    icon: <FaCreditCard className="icon" />
+    description: 'We fund omnichannel, real-time and AI-powered digital banking systems that personalize financial experiences.',
+    icon: <FaCreditCard />,
   },
   {
     title: 'Wealth Management',
-    description: 'Automated advisory and investment tools.',
-    details: [
-      'Portfolio management with robo-advisors.',
-      'Secure client portals with performance tracking.',
-      'Compliance and risk monitoring.'
-    ],
-    icon: <FaChartLine className="icon" />
+    description: 'Modern investment advisory with robo-advisors, secure portals, and real-time compliance tracking.',
+    icon: <FaChartLine />,
   },
   {
     title: 'Microfinance Solutions',
-    description: 'Empowering underserved sectors with tech-driven lending.',
-    details: [
-      'Loan lifecycle automation.',
-      'Mobile KYC & onboarding.',
-      'Affordable credit solutions for SMEs.'
-    ],
-    icon: <FaPiggyBank className="icon" />
+    description: 'Tech-driven loan lifecycle automation and KYC tools to support underserved communities and SMEs.',
+    icon: <FaPiggyBank />,
   }
 ];
 
-export default function FinanceSection() {
+const FinanceSection = () => {
   return (
-    <section>
-      <h2>Finance Solutions</h2>
-      <div className="card-grid">
-        {financeSolutions.map((item, i) => (
-          <Card key={i} title={item.title} description={item.description} details={item.details} icon={item.icon} />
-        ))}
+    <section className="finance-section">
+      <div className="finance-wrapper">
+        <div className="finance-header">
+          <h2>Transforming Finance Through Smart Technology</h2>
+          <p>
+            At UniBanque, we empower banks, wealth firms, and financial startups with intelligent infrastructure, automation tools, and a digital-first mindset.
+          </p>
+        </div>
+
+        <div className="finance-grid">
+          {financeSolutions.map((item, index) => (
+            <div className="finance-card" key={index}>
+              <div className="finance-icon">{item.icon}</div>
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+              <button className="learn-more-btn">Know More <FaArrowRight className="btn-icon" /></button>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default FinanceSection;

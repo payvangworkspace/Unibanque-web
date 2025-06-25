@@ -13,8 +13,8 @@ const Footer = () => {
             <FaMapMarkerAlt className="icon" /> Suite 4, Europe House, Packhorse Road,<br />
             Gerrard Cross, Buckinghamshire, SL9 8BQ, United Kingdom
           </p>
-          <p><FaPhoneAlt className="icon" /> +44 7700 098523</p>
-          <p><FaEnvelope className="icon" /> info@unibanque.com</p>
+          <p className='phone-contact' onClick={() => (window.location.href = "tel:+447700098523")}><FaPhoneAlt className="icon"  /> +44 7700 098523</p>
+          <p className='phone-contact' onClick={() => (window.location.href = "mailto:support@unibanque.com")}><FaEnvelope className="icon" /> info@unibanque.com</p>
         </div>
 
         <div className="footer-right">

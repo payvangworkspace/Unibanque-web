@@ -1,0 +1,39 @@
+.tf-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  background-color: #fff;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.tf-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tf-section {
+  margin-top: 2rem;
+}
+
+.tf-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #0056b3;
+}
+
+.tf-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.tf-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.tf-list li {
+  margin-bottom: 0.5rem;
+}

@@ -1,0 +1,39 @@
+.cib-container {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+  background-color: #fff;
+  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.cib-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.cib-section {
+  margin-top: 2rem;
+}
+
+.cib-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #0056b3;
+}
+
+.cib-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.cib-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.cib-list li {
+  margin-bottom: 0.5rem;
+}
