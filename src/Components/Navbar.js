@@ -125,8 +125,8 @@ const Navbar = () => {
 
       <motion.div className="navbar-right" initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.3 }}>
         <div className="contact-info">
-          <span className="phone-contact" onClick={() => (window.location.href = "tel:+18001234567")}><FaPhoneAlt className="icon" /> +1 (800) 123-4567</span>
-          <span  onClick={() => (window.location.href = "mailto:support@unibanque.com")}><FaEnvelope className="icon" /> support@unibanque.com</span>
+          <span className="phone-contact" onClick={() => (window.location.href = "tel:+447700098523")}><FaPhoneAlt className="icon" />+44 7700 098523</span>
+          <span  onClick={() => (window.location.href = "mailto:info@unibanque.com")}><FaEnvelope className="icon" /> info@unibanque.com</span>
         </div>
       </motion.div>
     </motion.nav>
