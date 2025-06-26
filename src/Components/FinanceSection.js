@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaArrowRight, FaCreditCard, FaChartLine, FaPiggyBank } from 'react-icons/fa';
 import '../External CSS/FinanceSection.css';
+import { useNavigate } from 'react-router-dom';
 
 const financeSolutions = [
   {
@@ -20,7 +21,20 @@ const financeSolutions = [
   }
 ];
 
+
+
+
+
 const FinanceSection = () => {
+
+  const navigate=useNavigate();
+
+function redirectContact(){
+  navigate("/contact");
+}
+
+
+
   return (
     <section className="finance-section">
       <div className="finance-wrapper">
@@ -37,7 +51,7 @@ const FinanceSection = () => {
               <div className="finance-icon">{item.icon}</div>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
-              <button className="learn-more-btn">Know More <FaArrowRight className="btn-icon" /></button>
+              <button className="learn-more-btn" onClick={redirectContact}>Know More <FaArrowRight className="btn-icon" /></button>
             </div>
           ))}
         </div>

@@ -1,8 +1,21 @@
 import React from 'react';
 import '../External CSS/Logistics.css';
 import { FaTruckMoving, FaWarehouse, FaNetworkWired, FaArrowRight } from 'react-icons/fa';
-
+import { useNavigate } from "react-router-dom";
 const Logistics = () => {
+const navigate=useNavigate();
+function redirectContact(){
+
+navigate("/contact")
+
+
+
+
+}
+
+
+
+
   return (
     <section className="logistics-section">
       <div className="logistics-wrapper">
@@ -20,7 +33,7 @@ const Logistics = () => {
             <p>
               Finance sustainable logistics fleets with real-time tracking, reduced fuel usage, smart tech integration, and emission control for efficient and eco-conscious transport operations.
             </p>
-            <button className="learn-more-btn">Know More <FaArrowRight className="btn-icon" /></button>
+            <button className="learn-more-btn" onClick={redirectContact}>Know More <FaArrowRight className="btn-icon" /></button>
           </div>
 
           <div className="logistics-card">
@@ -29,7 +42,7 @@ const Logistics = () => {
             <p>
               Transform warehouses using IoT, robotics, and automation systems to enhance inventory control, real-time monitoring, and operational efficiency across storage and distribution.
             </p>
-            <button className="learn-more-btn">Know More <FaArrowRight className="btn-icon" /></button>
+            <button className="learn-more-btn" onClick={redirectContact}>Know More <FaArrowRight className="btn-icon" /></button>
           </div>
 
           <div className="logistics-card">
@@ -38,7 +51,7 @@ const Logistics = () => {
             <p>
               Expand your logistics footprint globally through strategic funding, digital tools, and seamless integration of cross-border operations to strengthen your worldwide supply chain.
             </p>
-            <button className="learn-more-btn">Know More <FaArrowRight className="btn-icon" /></button>
+            <button className="learn-more-btn" onClick={redirectContact}>Know More <FaArrowRight className="btn-icon" /></button>
           </div>
         </div>
       </div>

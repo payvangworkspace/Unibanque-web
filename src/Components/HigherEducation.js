@@ -1,8 +1,23 @@
 import React from 'react';
 import '../External CSS/HigherEducation.css';
 import { FaUniversity, FaChalkboardTeacher, FaGraduationCap, FaArrowRight } from 'react-icons/fa';
-
+import { useNavigate } from "react-router-dom";
 const HigherEducation = () => {
+const navigate=useNavigate();
+
+function redirectContact(){
+
+navigate("/contact")
+
+
+
+
+}
+
+
+
+
+
   return (
     <section className="higher-education-section">
       <div className="higher-education-wrapper">
@@ -20,7 +35,7 @@ const HigherEducation = () => {
             <p>
               Partnering with universities to fund modern campuses equipped with AI-powered learning, smart facilities, and sustainable energy solutions.
             </p>
-              <button className="learn-more-btn">Know More <FaArrowRight className="btn-icon" /></button>
+              <button className="learn-more-btn" onClick={redirectContact}>Know More <FaArrowRight className="btn-icon" /></button>
           </div>
 
           <div className="higher-education-card">
@@ -29,7 +44,7 @@ const HigherEducation = () => {
             <p>
               Providing strategic support for faculty development, grants, and innovation-driven research to advance knowledge and global impact.
             </p>
-              <button className="learn-more-btn">Know More <FaArrowRight className="btn-icon" /></button>
+              <button className="learn-more-btn" onClick={redirectContact}>Know More <FaArrowRight className="btn-icon" /></button>
           </div>
 
           <div className="higher-education-card">
@@ -38,7 +53,7 @@ const HigherEducation = () => {
             <p>
               Enhancing the student journey with financial tools, scholarships, ed-tech partnerships, and personalized learning ecosystems.
             </p>
-              <button className="learn-more-btn">Know More <FaArrowRight className="btn-icon" /></button>
+              <button className="learn-more-btn" onClick={redirectContact}>Know More <FaArrowRight className="btn-icon" /></button>
           </div>
         </div>
       </div>

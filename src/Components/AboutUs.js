@@ -49,7 +49,7 @@ const aboutSections = [
 
 const AboutUs = () => (
   <section className="about-us-section">
-    <div className="about-us-container">
+    <div className="about-us-container" style={{cursor:"pointer"}}>
       {/* <h2 className="about-us-title">About UNIBANQUE</h2> */}
       <div className="about-us-grid">
         {aboutSections.map((section, index) => (

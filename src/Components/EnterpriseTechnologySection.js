@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaArrowRight, FaCloud, FaShieldAlt, FaCogs } from 'react-icons/fa';
 import '../External CSS/EnterpriseTechnologySection.css';
-
+import { useNavigate } from "react-router-dom";
 const enterpriseTechSolutions = [
   {
     title: 'Cloud Modernization',
@@ -21,6 +21,18 @@ const enterpriseTechSolutions = [
 ];
 
 const EnterpriseTechnologySection = () => {
+
+
+  const navigate=useNavigate();
+
+function redirectContact(){
+
+navigate("/contact")
+
+
+
+
+}
   return (
     <section className="enterprise-section">
       <div className="enterprise-wrapper">
@@ -38,7 +50,7 @@ const EnterpriseTechnologySection = () => {
               <div className="enterprise-icon">{item.icon}</div>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
-              <button className="learn-more-btn">Know More <FaArrowRight className="btn-icon" /></button>
+              <button className="learn-more-btn" onClick={redirectContact}>Know More <FaArrowRight className="btn-icon" /></button>
             </div>
           ))}
         </div>

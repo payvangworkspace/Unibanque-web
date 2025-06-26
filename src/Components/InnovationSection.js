@@ -1,8 +1,14 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import '../External CSS/InnovationSection.css';
+import { useNavigate } from 'react-router-dom';
 
 const InnovationSection = () => {
+
+
+  const navigate=useNavigate();
+
+
   const cards = [
     {
       img: './c1.jpg',
@@ -20,6 +26,11 @@ const InnovationSection = () => {
       subtitle: 'Financial Planning'
     }
   ];
+function redirectContact(){
+navigate("/contact")
+}
+
+
 
   return (
     <section className="innovation-section">
@@ -43,7 +54,7 @@ const InnovationSection = () => {
                 <h3 className="innovation-card-subtitle">{card.subtitle}</h3>
               </div>
               <div className="innovation-card-hover-footer">
-                <span>Learn More</span>
+                <span onClick={redirectContact} style={{cursor:"pointer"}}>Learn More</span>
                 <FaArrowRight className="hover-icon" />
               </div>
             </div>

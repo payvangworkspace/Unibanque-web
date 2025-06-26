@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaArrowRight, FaExchangeAlt, FaBalanceScale, FaSearchDollar } from 'react-icons/fa';
 import '../External CSS/CapitalMarketSection.css';
-
+import { useNavigate } from 'react-router-dom';
 const capitalMarketsSolutions = [
   {
     title: 'Trading Infrastructure',
@@ -21,6 +21,20 @@ const capitalMarketsSolutions = [
 ];
 
 const CapitalMarketsSection = () => {
+
+const navigate=useNavigate();
+
+function redirectContact(){
+
+navigate("/contact")
+
+
+
+
+}
+
+
+
   return (
     <section className="capital-section">
       <div className="capital-wrapper">
@@ -38,7 +52,7 @@ const CapitalMarketsSection = () => {
               <div className="capital-icon">{item.icon}</div>
               <h3>{item.title}</h3>
               <p>{item.description}</p>
-              <button className="learn-more-btn">Know More <FaArrowRight className="btn-icon" /></button>
+              <button className="learn-more-btn" onClick={redirectContact}>Know More <FaArrowRight className="btn-icon" /></button>
             </div>
           ))}
         </div>

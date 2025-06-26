@@ -21,7 +21,7 @@ const Manufacturing = () => {
             <p>
               Enable digital transformation with financing for automation, analytics, and modern industrial systems. Our solutions ensure your plant remains agile, data-driven, and ready for the future.
             </p>
-            <Link to="#" className="learn-more-btn">
+            <Link to="/contact" className="learn-more-btn">
               Know More <FaArrowRight className="btn-icon" />
             </Link>
           </div>
@@ -32,7 +32,7 @@ const Manufacturing = () => {
             <p>
               Improve supply chain agility with funding models that support resilience, continuity, and global logistics. We offer the financial tools to mitigate risks and maximize efficiency.
             </p>
-            <Link to="#" className="learn-more-btn">
+            <Link to="/contact" className="learn-more-btn">
               Know More <FaArrowRight className="btn-icon" />
             </Link>
           </div>
@@ -43,7 +43,7 @@ const Manufacturing = () => {
             <p>
               Support your R&D goals with innovation financing, helping bring new ideas to market efficiently. We back your ambitions with advisory support and scalable funding.
             </p>
-            <Link to="#" className="learn-more-btn">
+            <Link to="/contact" className="learn-more-btn">
               Know More <FaArrowRight className="btn-icon" />
             </Link>
           </div>

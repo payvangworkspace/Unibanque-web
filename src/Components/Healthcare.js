@@ -1,8 +1,23 @@
 import React from 'react';
 import { FaArrowRight, FaClinicMedical, FaUserNurse, FaVials } from 'react-icons/fa';
 import '../External CSS/Healthcare.css';
+import { useNavigate } from 'react-router-dom';
 
 const Healthcare = () => {
+const navigate=useNavigate();
+
+function redirectContact(){
+
+navigate("/contact")
+
+
+
+
+}
+
+
+
+
   return (
     <section className="healthcare-section">
       <div className="healthcare-wrapper">
@@ -22,7 +37,7 @@ const Healthcare = () => {
             <p>
               We fund the expansion and modernization of hospitals, clinics, and diagnostics centers with flexible, scalable capital solutions aligned with regulatory requirements.
             </p>
-              <button className="learn-more-btn">Know More <FaArrowRight className="btn-icon" /></button>
+              <button className="learn-more-btn" onClick={redirectContact}>Know More <FaArrowRight className="btn-icon" /></button>
           </div>
 
           <div className="healthcare-card">
@@ -31,7 +46,7 @@ const Healthcare = () => {
             <p>
               Support for recruitment, payroll optimization, and training programs to help you maintain a high-performing medical workforce in a rapidly changing landscape.
             </p>
-              <button className="learn-more-btn">Know More <FaArrowRight className="btn-icon" /></button>
+              <button className="learn-more-btn" onClick={redirectContact}>Know More <FaArrowRight className="btn-icon" /></button>
           </div>
 
           <div className="healthcare-card">
@@ -40,7 +55,7 @@ const Healthcare = () => {
             <p>
               From biotech startups to pharmaceutical R&D, we provide capital and consultancy to fast-track innovation, compliance, and market access.
             </p>
-              <button className="learn-more-btn">Know More <FaArrowRight className="btn-icon" /></button>
+              <button className="learn-more-btn" onClick={redirectContact}>Know More <FaArrowRight className="btn-icon" /></button>
           </div>
         </div>
       </div>
