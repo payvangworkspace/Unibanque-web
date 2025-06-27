@@ -419,7 +419,7 @@ function App() {
 
 
     <div>
-  <BrowserRouter basename="/Unibanque-web">
+  <BrowserRouter >
      
         <Routes>
           <Route path="/" element={<Home  />} />

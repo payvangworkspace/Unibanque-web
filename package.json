@@ -1,6 +1,5 @@
 {
   "name": "unibank-web",
-  "homepage": "https://payvangworkspace.github.io/Unibanque-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
